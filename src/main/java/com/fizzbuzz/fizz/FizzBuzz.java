@@ -18,14 +18,14 @@ public class FizzBuzz
         {
             if (i % 3 == 0 && i % 5 == 0)
             {
-                fizzBuzzResult += "fizzbuzz" + "<br/>";
+                fizzBuzzResult += i + " is multiple of 3 & 5 fizzbuzz" + "<br/>";
             }
             else if (i % 3 == 0) {
-                fizzBuzzResult += "fizz" + "<br/>";
+                fizzBuzzResult += i + " is multiple of 3 fizz" + "<br/>";
             }
             else if (i % 5 == 0)
             {
-                fizzBuzzResult += "buzz" + "<br/>";
+                fizzBuzzResult += i + " is multiple of 5 buzz" + "<br/>";
             }
             else
             {
