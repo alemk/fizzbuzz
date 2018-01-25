@@ -18,14 +18,14 @@ public class FizzBuzz
         {
             if (i % 3 == 0 && i % 5 == 0)
             {
-                fizzBuzzResult += i + " is multiple of 3 & 5 fizzbuzz" + "<br/>";
+                fizzBuzzResult += "fizzbuzz" + "<br/>";
             }
             else if (i % 3 == 0) {
-                fizzBuzzResult += i + " is multiple of 3 fizz" + "<br/>";
+                fizzBuzzResult += "fizz" + "<br/>";
             }
             else if (i % 5 == 0)
             {
-                fizzBuzzResult += i + " is multiple of 5 buzz" + "<br/>";
+                fizzBuzzResult += "buzz" + "<br/>";
             }
             else
             {
@@ -33,8 +33,7 @@ public class FizzBuzz
             }
         }
         String catcher = chechothermultiple(numberRange);
-        return "Displaying multiple of 3 as fizz, 5 as buzz, 3&5 as fizzbuzz and if not display as it is "
-                + "<br/>" +fizzBuzzResult + "Displaying only multiples of 7,17,23 " + "<br/>"+ catcher;
+        return "<br/>" +fizzBuzzResult + "<br/>"+ catcher;
     }
     private String chechothermultiple(int number)
     {
