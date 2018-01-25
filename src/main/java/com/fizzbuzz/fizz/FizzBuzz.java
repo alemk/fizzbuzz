@@ -7,7 +7,7 @@ import java.util.Scanner;
 @RestController
 public class FizzBuzz
 {
-    @RequestMapping ("/")
+    @RequestMapping ("/fizzBuzzResult")
     public String checkMultiple()
     {
         String fizzBuzzResult="";
@@ -16,27 +16,22 @@ public class FizzBuzz
         int numberRange = keyboard.nextInt();
         for (int i = 1; i <= numberRange; i++)
         {
-            if (i % 3 == 0 && i % 5 == 0) {
-                fizzBuzzResult += "fizzbuzz";
-                System.out.println(fizzBuzzResult);
+            if (i % 3 == 0 && i % 5 == 0)
+            {
+                fizzBuzzResult += "fizzbuzz" + "<br/>";
             }
             else if (i % 3 == 0) {
-                fizzBuzzResult += "fizz";
+                fizzBuzzResult += "fizz" + "<br/>";
             }
             else if (i % 5 == 0)
             {
-                fizzBuzzResult += "buzz";
+                fizzBuzzResult += "buzz" + "<br/>";
             }
             else
             {
-                fizzBuzzResult +=i;
+                fizzBuzzResult +=i + "<br/>";
             }
-
-
         }
         return fizzBuzzResult;
-
     }
-
-
 }
