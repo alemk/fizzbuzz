@@ -12,7 +12,7 @@ public class FizzBuzz
     {
         String fizzBuzzResult="";
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Enter the number range");
+        System.out.println("Enter the number range to play fizz and buzz");
         int numberRange = keyboard.nextInt();
         for (int i = 1; i <= numberRange; i++)
         {
@@ -29,9 +29,28 @@ public class FizzBuzz
             }
             else
             {
-                fizzBuzzResult +=i + "<br/>";
+                fizzBuzzResult += i + "<br/>";
             }
         }
-        return fizzBuzzResult;
+        String catcher = chechothermultiple(numberRange);
+        return "Displaying multiple of 3 as fizz, 5 as buzz, 3&5 as fizzbuzz and if not display as it is "
+                + "<br/>" +fizzBuzzResult + "Displaying only multiples of 7,17,23 " + "<br/>"+ catcher;
+    }
+    private String chechothermultiple(int number)
+    {
+        String result = "";
+        for (int y = 1; y <= number; y++)
+        {
+            if (y % 7 == 0) {
+                result += y + "<br/>";
+            } else if (y % 17 == 0) {
+                result += y + "<br/>";
+            } else if (y % 23 == 0) {
+                result += y + "<br/>";
+            } else {
+                result += "";
+            }
+        }
+        return result;
     }
 }
