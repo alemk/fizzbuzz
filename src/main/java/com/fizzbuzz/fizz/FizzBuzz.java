@@ -37,19 +37,45 @@ public class FizzBuzz
     }
     private String chechothermultiple(int number)
     {
-        String result = "";
+        int sevencount= 0;
+        int seventencount=0;
+        int twentythree = 0;
+
         for (int y = 1; y <= number; y++)
         {
-            if (y % 7 == 0) {
-                result += y + "<br/>";
-            } else if (y % 17 == 0) {
-                result += y + "<br/>";
-            } else if (y % 23 == 0) {
-                result += y + "<br/>";
-            } else {
-                result += "";
+            if(y % 7 == 0 && y % 17 == 0 && y % 23 == 0)
+            {
+                sevencount ++;
+                seventencount ++;
+                twentythree  ++;
+            }
+            if(y % 7 == 0 && y % 17 == 0)
+            {
+                sevencount ++;
+                seventencount ++;
+            }
+            if(y % 7 == 0 && y % 23 == 0)
+            {
+                sevencount ++;
+                twentythree  ++;
+            }
+            if(y % 17 == 0 && y % 23 == 0)
+            {
+                seventencount ++;
+                twentythree  ++;
+            }
+
+            else if (y % 7 == 0)
+            {
+                sevencount ++;
+            } else if (y % 17 == 0)
+            {
+                seventencount ++;
+            } else if (y % 23 == 0)
+            {
+                twentythree  ++;
             }
         }
-        return result;
+        return "Multiple number of 7 count: " + sevencount +" Multiple number of 17 Count: "+ seventencount + "Multiple number of 23 Count: " + twentythree ;
     }
 }
